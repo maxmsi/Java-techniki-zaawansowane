@@ -1,0 +1,2 @@
+Aplikacja zawiera dwie funkcje,  makeImprint oraz checkImprimt,
+za pomocą pierwszej wykonywany jest odcisk md5,  nastepnie możemy sprawdzić czy zostały podmienione bajty w pliku funkcja checkImprint.

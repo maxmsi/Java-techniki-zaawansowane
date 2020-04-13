@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<SplitPane dividerPositions="0.5, 0.5, 0.5, 0.5, 0.5, 0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <items>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="lang" mnemonicParsing="false" text="%menulanguage">
+            <items>
+              <MenuItem fx:id="set_polish" mnemonicParsing="false" text="%polish" />
+                <MenuItem fx:id="set_english" mnemonicParsing="false" text="%english" />
+            </items>
+          </Menu>
+          <Menu fx:id="about" mnemonicParsing="false" text="%aboutme">
+            <items>
+              <MenuItem fx:id="showid" mnemonicParsing="false" text="%show" />
+            </items>
+          </Menu>
+          <Menu fx:id="help" mnemonicParsing="false" text="%helpkey">
+            <items>
+              <MenuItem fx:id="aboutprogram" mnemonicParsing="false" text="%proginf" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="first_label" text="%firstlabel" />
+      <TextField fx:id="movie_title" promptText="%first_textfield" />
+      <Label fx:id="second_label" text="%secondlabelyear" />
+      <TextField fx:id="movie_release" promptText="%second_textfield" />
+       <Button fx:id="search_button" text="%search_button" />
+       <TableView fx:id="tableMovieList" visible="true">
+           <columns>
+               <TableColumn fx:id="columnTitle" text="%titlebundle" />
+               <TableColumn fx:id="columnDirector" text="%director" />
+               <TableColumn fx:id="columnRelease" prefWidth="115.0" text="%Wydanie" />
+               <TableColumn fx:id="columnGrade" prefWidth="110.0" text="%grade" />
+               <TableColumn fx:id="columnGenre" text="%genre" />
+               <TableColumn fx:id="columnLanguage" minWidth="0.0" prefWidth="129.0" text="%languagebundle" />
+           </columns>
+       </TableView>
+   </items>
+</SplitPane>

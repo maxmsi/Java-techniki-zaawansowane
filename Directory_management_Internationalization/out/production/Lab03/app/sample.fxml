@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.622568093385214" prefHeight="461.0" prefWidth="773.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="50.0" prefHeight="459.0" prefWidth="255.0">
+               <children>
+                   <Label layoutX="4.0" layoutY="5.0" text="Zawartość katalogu :" textAlignment="CENTER" />
+                   <Label fx:id="dir_label" layoutX="150.0" layoutY="5.0" text="pathname" textAlignment="CENTER" />
+                   <TextField fx:id="new_dir_path" layoutX="4.0" layoutY="25.0" />
+                   <Button fx:id="set_new_path" layoutX="175.0" layoutY="25.0" text="Zatwierdź scięzkę" textAlignment="CENTER" />
+                   <Button fx:id="previous_button" layoutX="9.0" layoutY="70.0" text="Poprzedni katalog" textAlignment="CENTER" />
+                   <Button fx:id="next_button" layoutX="230.0" layoutY="70.0" text="Następny zaznaczony katalog" textAlignment="CENTER" />
+                   <Label layoutX="8.0" layoutY="135.0" text="Pliki :" textAlignment="CENTER" />
+                   <Label layoutX="229.0" layoutY="135.0" text="Katalogi : " textAlignment="CENTER" />
+                  <ListView fx:id="files_listview" layoutX="8.0" layoutY="180.0" prefHeight="150.0" prefWidth="200.0" />
+                  <ListView fx:id="dir_listview" layoutX="229.0" layoutY="180.0" prefHeight="150.0" prefWidth="200.0" />
+                  <Button fx:id="open_button" layoutX="9.0" layoutY="357.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="198.0" text=" Wyświetl zawartość pliku" />
+                  <Label layoutX="16.0" layoutY="397.0" text="Sposób wczytania plików : " />
+                  <Label fx:id="load_info" layoutX="220.0" layoutY="397.0" text="" />
+                  <ChoiceBox fx:id="choice_box" layoutX="58.0" layoutY="130.0" prefWidth="150.0">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList" >
+                              <String fx:value="Wszystkie pliki" />
+                              <String fx:value="Zdjęcia" />
+                          </FXCollections>
+                      </items>
+                  </ChoiceBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="291.0">
+              <TextArea fx:id="file_contain" prefHeight="476.0" prefWidth="1200.0" text=" " />
+              <ImageView fx:id="image_view" fitHeight="650.0" fitWidth="900.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+          </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</GridPane>

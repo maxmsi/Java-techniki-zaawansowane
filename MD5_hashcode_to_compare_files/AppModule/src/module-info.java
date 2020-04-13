@@ -1,0 +1,3 @@
+module AppModule {
+    requires LibModule;
+}

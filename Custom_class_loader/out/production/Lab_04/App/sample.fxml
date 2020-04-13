@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="409.0" prefWidth="587.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+        <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0">
+                <Label fx:id="classlabel" layoutX="5" layoutY="10" prefWidth="150.0" text="Wybierz klase:" />
+                <ComboBox fx:id="classlist" layoutX="5" layoutY="35" prefWidth="150.0" />
+                <Button fx:id="loadclassButton" layoutX="157" layoutY="35" prefWidth="125.0" text="Załaduj" />
+                <Button fx:id="unloadclassButton" layoutX="157" layoutY="5" prefWidth="125.0" text="Wyładuj" />
+                <Label fx:id="classinfo" layoutX="350" layoutY="10" prefWidth="150.0" text="Informacje o klasie:" />
+                <TextArea fx:id="getInfoText" layoutX="350" layoutY="28" prefHeight="50" prefWidth="200.0" />
+                <Label layoutX="5" layoutY="65" prefWidth="150.0" text="Wprowadź tekst:" />
+                <Button fx:id="startProcessingButton" mnemonicParsing="false" text="Rozpocznij przetwarzanie" layoutX="200" layoutY="90" />
+                <TextArea  fx:id="toprocessText" layoutX="25" layoutY="120" prefWidth="550.0" text="" />
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="29.0" prefWidth="585.0" >
+                <TextArea fx:id="resultTextArea" layoutX="5" layoutY="5" prefWidth="580.0" text="" />
+          </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</GridPane>
