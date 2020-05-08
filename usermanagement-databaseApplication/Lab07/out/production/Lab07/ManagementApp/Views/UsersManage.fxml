@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementApp.Controllers.UserManage">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="381.0" prefWidth="578.0">
+         <children>
+            <TableView fx:id="user_tableview" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="540.0">
+              <columns>
+              </columns>
+            </TableView>
+            <TextField fx:id="id_user_field" layoutX="173.0" layoutY="289.0" prefHeight="26.0" prefWidth="91.0" promptText="id_user" />
+            <TextField fx:id="imie_field" layoutX="113.0" layoutY="224.0" prefHeight="26.0" prefWidth="129.0" promptText="imie" />
+            <TextField fx:id="nazwisko_field" layoutX="250.0" layoutY="224.0" prefHeight="26.0" prefWidth="129.0" promptText="nazwisko" />
+            <TextField fx:id="numer_field" layoutX="383.0" layoutY="224.0" promptText="numer_użytkownika" />
+            <Button fx:id="add_button" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Dodaj " />
+            <Button fx:id="delete_button" layoutX="14.0" layoutY="331.0" mnemonicParsing="false" text="Usuń" />
+            <Button fx:id="edit_button" layoutX="118.0" layoutY="331.0" mnemonicParsing="false" text="Edytuj" />
+            <Label layoutX="11.0" layoutY="294.0" prefHeight="16.0" prefWidth="164.0" text="Wpisz id użytkownika" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

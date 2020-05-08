@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="271.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementApp.Controller">
+   <children>
+      <Pane prefHeight="338.0" prefWidth="577.0">
+         <children>
+            <Button fx:id="data_manage_button" layoutX="15.0" layoutY="1.0" mnemonicParsing="false" text="Zarzadzaj urzytkownikami" />
+            <Button fx:id="payments_button" layoutX="372.0" layoutY="1.0" mnemonicParsing="false" text="Rejestracja/edycja opłat" />
+            <Button fx:id="pricelist_button" layoutX="15.0" layoutY="72.0" mnemonicParsing="false" text="Zarzadzanie cennikiem" />
+            <Button fx:id="check_bills_button" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="258.0" text="Przegladaj należnośći użytkownika :" />
+            <TableView fx:id="user_tableview" layoutX="15.0" layoutY="149.0" prefHeight="151.0" prefWidth="530.0" />
+            <Button fx:id="installations_button" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" text="Zarzadzaj instalacjami" />
+            <Button fx:id="check_payments_button" layoutX="289.0" layoutY="123.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="258.0" text="Przeglądaj wpłaty użytkownika :" />
+            <Button fx:id="back_button" layoutX="246.0" layoutY="300.0" mnemonicParsing="false" text="Wstecz " />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

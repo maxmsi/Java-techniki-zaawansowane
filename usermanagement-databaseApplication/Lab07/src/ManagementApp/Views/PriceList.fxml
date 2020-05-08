@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementApp.Controllers.PriceListController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="381.0" prefWidth="578.0">
+         <children>
+            <TableView fx:id="pricelist_tableview" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="540.0">
+               <columns>
+               </columns>
+            </TableView>
+            <TextField fx:id="id_pricelist_field" layoutX="160.0" layoutY="289.0" prefHeight="26.0" prefWidth="91.0" promptText="id_usługi" />
+            <TextField fx:id="typ_field" layoutX="160.0" layoutY="224.0" prefHeight="26.0" prefWidth="129.0" promptText="typ_usługi" />
+            <TextField fx:id="cena_field" layoutX="315.0" layoutY="224.0" prefHeight="26.0" prefWidth="129.0" promptText="cena" />
+            <Button fx:id="add_button" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Dodaj " />
+            <Button fx:id="delete_button" layoutX="14.0" layoutY="331.0" mnemonicParsing="false" text="Usuń" />
+            <Button fx:id="edit_button" layoutX="105.0" layoutY="331.0" mnemonicParsing="false" text="Edytuj" />
+            <Label layoutX="11.0" layoutY="294.0" prefHeight="16.0" prefWidth="164.0" text="Wpisz id usługi" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

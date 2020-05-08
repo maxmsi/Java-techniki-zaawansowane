@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementApp.Controllers.DataManageController">
+   <children>
+      <Pane layoutX="14.0" layoutY="12.0" prefHeight="377.0" prefWidth="577.0">
+         <children>
+            <TableView fx:id="installation_tableview" layoutX="3.0" layoutY="14.0" prefHeight="204.0" prefWidth="571.0">
+              <columns>
+                <TableColumn prefWidth="132.0" text="id_installation" />
+                <TableColumn prefWidth="75.0" text="address" />
+                  <TableColumn prefWidth="133.0" text="routherNumber" />
+                  <TableColumn prefWidth="122.0" text="serviceType" />
+                  <TableColumn prefWidth="105.0" text="id_user" />
+              </columns>
+            </TableView>
+            <Button fx:id="delete_button" layoutX="131.0" layoutY="330.0" mnemonicParsing="false" text="Usun" />
+            <Button fx:id="edit_button" layoutX="40.0" layoutY="330.0" mnemonicParsing="false" text="Edytuj" />
+            <Button fx:id="add_button" layoutX="14.0" layoutY="243.0" mnemonicParsing="false" text="Dodaj" />
+            <TextField fx:id="id_installation_field" layoutX="216.0" layoutY="301.0" prefHeight="26.0" prefWidth="119.0" />
+            <TextField fx:id="addres_field" layoutX="131.0" layoutY="243.0" prefHeight="26.0" prefWidth="78.0" promptText="addres" />
+            <TextField fx:id="routherNumber_field" layoutX="216.0" layoutY="243.0" prefHeight="26.0" prefWidth="119.0" promptText="routherNumber" />
+            <TextField fx:id="serviceType_field" layoutX="349.0" layoutY="243.0" prefHeight="26.0" prefWidth="119.0" promptText="serviceType" />
+            <TextField fx:id="id_user_field" layoutX="474.0" layoutY="243.0" prefHeight="26.0" prefWidth="100.0" promptText="id_user" />
+            <Label layoutX="14.0" layoutY="306.0" prefHeight="16.0" prefWidth="207.0" text="Wpisz id do edycji/usuniecia :" />
+            <Label layoutX="14.0" layoutY="218.0" text="Uzupelnij dane by dodac lub edytowac nowy rekord: " />
+            <TextField fx:id="iduslugi_field" layoutX="473.0" layoutY="269.0" prefHeight="26.0" prefWidth="100.0" promptText="id_uslugi" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
