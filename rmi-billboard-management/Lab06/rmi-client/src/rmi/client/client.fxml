@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rmi.client.ClientApp">
+   <children>
+      <Pane prefHeight="373.0" prefWidth="593.0">
+         <children>
+            <Label layoutX="14.0" layoutY="36.0" text="Wprowadz tekst reklamy :" />
+            <TextArea fx:id="advert_text" layoutX="197.0" layoutY="36.0" prefHeight="132.0" prefWidth="385.0" />
+            <Label layoutX="14.0" layoutY="179.0" text="Czas trwania reklamy : " />
+            <TextArea fx:id="duration_text" layoutX="197.0" layoutY="174.0" prefHeight="29.0" prefWidth="385.0" />
+            <Button fx:id="allow_button" layoutX="14.0" layoutY="219.0" mnemonicParsing="false" text="Zatwierdź" />
+            <Label fx:id="order_details" layoutX="197.0" layoutY="224.0" />
+            <Label fx:id="order_text" layoutX="100.0" layoutY="258.0" />
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
