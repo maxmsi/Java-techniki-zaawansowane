@@ -1,0 +1,7 @@
+-kompilacja \/
+javac Manager.java ManagerMXBean.java CaseService.java CaseServiceMBean.java
+
+-uruchomienie Menagera  \/ wywolowac z folderu src.
+java -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8008 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false mbean.logic.Manager
+
+

@@ -1,0 +1,8 @@
+#biletomat_pane{
+
+ -fx-background-color: #fdcb9e;
+                   -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+                   -fx-font-size: 11pt;
+                   -fx-text-fill: #3f3f44;
+                   -fx-background-insets: 0 0 0 0, 0, 1, 2;
+   }

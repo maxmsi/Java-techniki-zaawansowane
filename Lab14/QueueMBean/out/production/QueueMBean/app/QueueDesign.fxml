@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.QueController">
+   <children>
+      <Pane fx:id="biletomat_pane" layoutX="22.0" layoutY="28.0" prefHeight="345.0" prefWidth="206.0">
+         <children>
+            <Label layoutX="48.0" layoutY="7.0" text="Biletomat" />
+            <ListView fx:id="sprawy_listview" layoutX="18.0" layoutY="35.0" prefHeight="236.0" prefWidth="123.0" />
+            <Button fx:id="generuj_button" layoutX="2.0" layoutY="282.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" text="Generuj bilet sprawy" />
+         </children>
+      </Pane>
+      <Pane layoutX="230.0" layoutY="20.0" prefHeight="345.0" prefWidth="459.0">
+         <children>
+            <Label layoutX="132.0" layoutY="20.0" text="Tablica informacyjna" />
+            <TextArea fx:id="queue" layoutX="13.0" layoutY="36.0" prefHeight="292.0" prefWidth="387.0" />
+            <Button fx:id="refresh_button" layoutX="354.0" layoutY="-12.0" mnemonicParsing="false" text="Odśwież system" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
