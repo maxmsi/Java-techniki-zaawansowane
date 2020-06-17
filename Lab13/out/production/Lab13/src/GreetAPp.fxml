@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+
+<VBox fx:id="vbox" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" spacing="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+
+    <fx:script>
+        var System = Java.type("java.lang.System")
+        var File = Java.type("java.io.File")
+        var BufferedReader = Java.type("java.io.BufferedReader")
+        var String = Java.type("java.lang.String")
+        var Scene = javafx.scene.Scene;
+        var Class = Java.type("java.lang.Class")
+        var GreetApp = Java.type("GreetApp");
+
+
+
+
+        var nameGreetType=['Odwagi i sił, by porywać się na cele i zmiany,\n które z pozoru wydają się trudne,\n a później wprost wymarzone,\n realizacji planów i nowych marzeń i kolejnych natchnień\n jak fal, które pchają statek do przodu.\n', 'Wszystkiego dobrego z okazji twych imienin.'];
+        var birthdayGreetType=['Z okazji urodzin, które są raz w roku,\n Niechaj będą szczęśliwe i pełne uroku.\n Składam Tobie szczere urodzinowe życzenia,\n Aby się spełniły najskrytsze marzenia.\n Niechaj los Tobie sprzyja, niosąc powodzenie,\n idź przez życie z dobrocią w sercu,\n otoczona ludźmi, których kochasz,\n silna poczuciem bezpieczeństwa i szczęścia,\n niech każdy obrót kalejdoskopu życia\n przynosi Ci radość.\n', ' .. lat temu ktoś przyszedł na świat \n Bez majtek butów \n i innych atrybutów \n Spełniając wszystkim marzenia i sny \n To właśnie TY! \n Wszystkiego najlepszego! \n '];
+        var fatherDayGreetType=['Drogi Tatusiu - najlepszy na świecie,\n który mnie kochasz w zimie i w lecie, jesienią, wiosną, w nieznanej trosce,\n w szczęśliwym domu - jak w raju rosnę, za Twoją dobroć dzisiaj dziękuję,\n zdrowia, łask Bożych, szczęścia winszuję.\n Bezpiecznej jazdy, spełnienia marzeń, pięknych urlopów i na zawsze razem! ', 'Tatusiowi Drogiemu\n Zawsze uśmiechniętemu Dużo życzymy radości\n I dni pełnych miłości\n Szczęściem wypełnionych chwil A do pracy... ...dużo sił! '];
+
+        function comboAction() {
+
+            var scene = vbox.getScene();
+            var s = themeBox.getSelectionModel().getSelectedItem();//get the selected item
+
+            switch (s) {
+                case "Dark":
+                    scene.getStylesheets().add(GreetApp.class.getResource("application.css").toExternalForm());
+                    break;
+                case "White":
+                    scene.getStylesheets().add(GreetApp.class.getResource("application_white.css").toExternalForm());
+                    break;
+            default:
+                    break;
+                         }
+            }
+
+        function buttonGenerate(event){
+            var chooseBox_v= chooseBox.getSelectionModel().getSelectedItem();
+            var chooseBox2_v= chooseBox2.getSelectionModel().getSelectedItem();
+
+            System.out.println(chooseBox2_v);
+            outputText.clear();
+            switch(chooseBox2_v) {
+            case 'Imieniny':
+                if(chooseBox_v=="Krótkie życzenia")
+                    {
+                        outputText.setText(checkName(inputText.getText())+ nameGreetType[1]);
+                    }
+                else{
+                        outputText.setText(checkName(inputText.getText())+ nameGreetType[0]);
+                    }
+                break;
+            case 'Urodziny':
+                if(chooseBox_v=="Krótkie życzenia")
+                    {
+                    outputText.setText(checkName(inputText.getText())+ birthdayGreetType[1]);
+                    }
+                else{
+                    outputText.setText(checkName(inputText.getText())+ birthdayGreetType[0]);
+                    }
+                break;
+            case 'Dzień Matki':
+                if(chooseBox_v=="Krótkie życzenia")
+                    {
+                    outputText.setText(checkName(inputText.getText())+ motherDayGreetType[1]);
+                    }
+                else{
+                    outputText.setText(checkName(inputText.getText())+ motherDayGreetType[0]);
+                    }
+                break;
+            case 'Dzień Ojca':
+                if(chooseBox_v=="Krótkie życzenia")
+                    {
+                    outputText.setText(fatherDayGreetType[1]);
+                    }
+                else{
+                    outputText.setText(fatherDayGreetType[0]);
+                    }
+                break;
+            default:
+        }
+        }
+
+        function buttonAction(event){
+            outputLbl.setText("Okej, nastepnie wybierz rodzaj strategie generowania dla imienia "+ inputText.getText());
+
+            if(chooseBox.getSelectionModel().getSelectedItem()==null){
+                chooseBox.getItems().addAll(
+                    "Losowo",
+                    "Długie życzenia",
+                    "Krótkie życzenia"
+                    );
+
+                chooseBox2.getItems().addAll(
+                    "Imieniny",
+                    "Urodziny",
+                    "Dzień Ojca"
+                    );
+                }
+
+        }
+
+        function checkName(name){
+            var str = name;
+            var end_with_a = str.endsWith("a");
+            var end_with_l = str.endsWith("l");
+            var end_with_r = str.endsWith("r");
+            var end_with_z = str.endsWith("z");
+            var end_with_k = str.endsWith("k");
+            var end_with_n = str.endsWith("n");
+            var end_with_w = str.endsWith("w");
+            var end_with_y = str.endsWith("y");
+            var end_with_f = str.endsWith("f");
+            var end_with_h = str.endsWith("h");
+            var end_with_b = str.endsWith("b");
+            var end_with_t = str.endsWith("t");
+
+            if(end_with_t){
+                return "Drogi "+ name.substr(0,name.length-1)+"cie,\n";
+            }
+            if(end_with_a){
+                return "Droga "+ name.substr(0,name.length-1)+"o,\n";
+                }
+            if(end_with_l){
+                return "Drogi "+ name.substr(0,name.length)+"u,\n";
+            }
+            if(end_with_r){
+                return "Drogi "+ name.substr(0,name.length)+"ze,\n";
+            }
+            if(end_with_z){
+                return "Drogi "+ name.substr(0,name.length)+"u,\n";
+            }
+            if(end_with_n){
+                return "Drogi "+ name.substr(0,name.length)+"ie,\n";
+            }
+            if(end_with_w){
+                return "Drogi "+ name.substr(0,name.length)+"ie,\n";
+            }
+            if(end_with_b){
+                return "Drogi "+ name+"ie,\n";
+            }
+            if(end_with_k){
+                return "Drogi "+ name.substr(0,name.length-2)+"ku,\n";
+            }
+            if(end_with_y){
+                return "Drogi "+ name+",\n";
+            }
+            if(end_with_f){
+                return "Drogi "+ name+"ie,\n";
+            }
+            if(end_with_h){
+                return "Drogi "+ name+"u,\n";
+             }
+        }
+
+
+    </fx:script>
+    <children>
+        <Label fx:id="inputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="400.0" text="Wpisz imię osoby dla której wygeneruje życzenia:" textAlignment="LEFT" />
+        <ComboBox fx:id="themeBox" onAction="comboAction(event);" translateX="435.0" translateY="-30.0" promptText="Zmien tło" >
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Dark" />
+                <String fx:value="White" />
+            </FXCollections>
+        </items>
+        </ComboBox>
+
+        <TextField fx:id="inputText" prefWidth="100.0" />
+        <Button fx:id="okBtn" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="buttonAction(event);" text="OK" textAlignment="CENTER" />
+        <Label fx:id="outputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="550.0" textAlignment="LEFT" />
+        <ComboBox fx:id="chooseBox" layoutX="50.0" layoutY="60.0" promptText="Typ generowania" />
+        <ComboBox fx:id="chooseBox2" promptText="Szablon" translateX="250.0" translateY="-50.0" />
+        <Button fx:id="genBtn" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="buttonGenerate(event);" text="Generuj" textAlignment="CENTER" translateY="-50" />
+        <TextArea fx:id="outputText" prefHeight="200.0" prefWidth="200.0" translateY="-40" wrapText="true" />
+
+    </children>
+</VBox>
